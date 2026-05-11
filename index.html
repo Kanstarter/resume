@@ -2,261 +2,941 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>강건 이력서 - 다우기술 커머스 플랫폼 서비스 기획</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="강건 (Kan Gang / Logan) - 13년차 PM. 대규모 파트너 생태계를 데이터와 시스템으로 설계.">
+<title>강건 (Kan Gang) — Product Manager</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
 <style>
-  @page { size: A4; margin: 15mm 18mm; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 9.5pt; line-height: 1.65; color: #1a1a1a; max-width: 210mm; margin: 0 auto; padding: 15mm 18mm; }
+  :root {
+    --bg: #faf8f3;
+    --bg-card: #ffffff;
+    --bg-deep: #18181b;
+    --ink: #18181b;
+    --ink-sub: #52525b;
+    --ink-mute: #a1a1aa;
+    --rule: #e7e5e0;
+    --accent: #8b1538;
+    --accent-soft: rgba(139, 21, 56, 0.08);
 
-  .header { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #1a1a1a; }
-  .header h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.5px; }
-  .header .subtitle { font-size: 10.5pt; color: #444; margin: 4px 0 10px; }
-  .contact-row { display: flex; gap: 18px; font-size: 8.5pt; color: #555; flex-wrap: wrap; }
-  .info-row { display: flex; gap: 24px; font-size: 8.5pt; color: #555; margin-top: 4px; flex-wrap: wrap; }
-
-  .competency-box { background: #f7f7f7; border-left: 3px solid #1a1a1a; padding: 12px 16px; margin: 14px 0 18px; }
-  .competency-box .headline { font-size: 10pt; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
-  .competency-box ul { list-style: none; padding: 0; }
-  .competency-box li { font-size: 9pt; line-height: 1.7; padding-left: 14px; position: relative; color: #333; margin-bottom: 2px; }
-  .competency-box li::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
-
-  .section { margin-bottom: 16px; margin-top: 20px; }
-  .section-title { font-size: 11pt; font-weight: 800; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-bottom: 10px; }
-
-  .career-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-bottom: 14px; }
-  .career-table th { background: #f0f0f0; padding: 5px 8px; text-align: left; font-weight: 600; border: 1px solid #ddd; }
-  .career-table td { padding: 5px 8px; border: 1px solid #ddd; }
-
-  .company-block { margin-bottom: 18px; }
-  .company-header { font-size: 10pt; font-weight: 700; margin-bottom: 2px; }
-  .company-role { font-size: 8.5pt; color: #555; margin-bottom: 10px; line-height: 1.6; }
-
-  .project { margin: 0 0 13px 4px; padding: 8px 0 8px 14px; border-left: 2.5px solid #d0d0d0; }
-  .project-title { font-size: 9.5pt; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
-  .project-context { font-size: 8.5pt; color: #555; margin-bottom: 5px; line-height: 1.6; }
-  .project-actions { padding-left: 13px; margin-bottom: 5px; }
-  .project-actions li { font-size: 8.5pt; line-height: 1.7; color: #333; margin-bottom: 2px; }
-  .project-result { font-size: 9pt; font-weight: 600; color: #1a1a1a; margin-top: 3px; }
-
-  .skill-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-bottom: 6px; }
-  .skill-table th { width: 120px; background: #f0f0f0; padding: 4px 8px; text-align: left; font-weight: 600; border: 1px solid #ddd; }
-  .skill-table td { padding: 4px 8px; border: 1px solid #ddd; }
-
-  .award-list { font-size: 8.5pt; list-style: none; }
-  .award-list li { display: flex; justify-content: space-between; padding: 2px 0; }
-  .award-list .date { color: #777; min-width: 120px; text-align: right; }
-
-  .edu-row { font-size: 8.5pt; display: flex; justify-content: space-between; padding: 2px 0; }
-
-  .inline-actions { padding-left: 13px; }
-  .inline-actions li { font-size: 8.5pt; line-height: 1.7; color: #333; margin-bottom: 2px; }
-
-  @media print {
-    body { padding: 0; }
-    .company-block { page-break-inside: avoid; }
-    .project { page-break-inside: avoid; }
+    --font-display: 'Instrument Serif', 'Pretendard Variable', serif;
+    --font-body: 'Pretendard Variable', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
   }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ───── NAV ───── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250, 248, 243, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13px;
+  }
+  .nav-mark {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    color: var(--ink-sub);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ───── HERO ───── */
+  .hero {
+    padding: 180px 0 120px;
+    position: relative;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+  .hero-meta::before {
+    content: '';
+    width: 36px;
+    height: 1px;
+    background: var(--ink-mute);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 10vw, 132px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .hero h1 .it { font-style: italic; }
+  .hero-subname {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--ink-sub);
+    margin-bottom: 56px;
+    letter-spacing: -0.01em;
+  }
+  .hero-lead {
+    max-width: 720px;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+  }
+  .hero-lead em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .hero-tag .dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ───── SECTION ───── */
+  section { padding: 100px 0; }
+  .section-mark {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+  }
+  .section-mark::before {
+    content: attr(data-num);
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .section-mark::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin-bottom: 56px;
+    max-width: 900px;
+  }
+  .section-title .it { font-style: italic; color: var(--accent); }
+
+  /* ───── IMPACT ───── */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .impact-cell {
+    background: var(--bg);
+    padding: 36px 28px;
+    transition: background .3s;
+  }
+  .impact-cell:hover { background: var(--bg-card); }
+  .impact-number {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 1;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .impact-label {
+    font-size: 13px;
+    color: var(--ink-sub);
+    line-height: 1.5;
+  }
+  .impact-source {
+    margin-top: 8px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ───── APPROACH ───── */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 56px;
+  }
+  .approach-item {
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+  .approach-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+  .approach-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .approach-desc {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-sub);
+  }
+
+  /* ───── EXPERIENCE ───── */
+  .exp-list { border-top: 1px solid var(--rule); }
+  .exp-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 36px 0;
+    display: grid;
+    grid-template-columns: 140px 1fr 2fr;
+    gap: 40px;
+    align-items: baseline;
+    transition: background .25s;
+  }
+  .exp-item:hover { background: rgba(255,255,255,0.4); }
+  .exp-year {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.05em;
+  }
+  .exp-company {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .exp-role {
+    font-size: 13px;
+    color: var(--ink-sub);
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+  }
+  .exp-summary {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-sub);
+  }
+
+  @media (max-width: 768px) {
+    .exp-item { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
+  }
+
+  /* ───── WORK / PROJECTS ───── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 24px;
+  }
+  .work-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    transition: transform .3s ease, border-color .3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+  .work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .work-company {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .work-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+    min-height: 62px;
+  }
+  .work-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-sub);
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .work-result {
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .work-result strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ───── TOOLKIT ───── */
+  .toolkit-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .toolkit-row {
+    display: contents;
+  }
+  .toolkit-row > * {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toolkit-cat {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    padding-right: 32px;
+  }
+  .toolkit-items {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--ink-sub);
+  }
+  .toolkit-items span {
+    display: inline-block;
+    padding: 4px 0;
+    margin-right: 20px;
+    color: var(--ink);
+  }
+  .toolkit-items span::after {
+    content: '·';
+    margin-left: 20px;
+    color: var(--ink-mute);
+  }
+  .toolkit-items span:last-child::after { content: ''; }
+
+  @media (max-width: 768px) {
+    .toolkit-grid { grid-template-columns: 1fr; }
+    .toolkit-row > *:nth-child(odd) { border-bottom: none; padding-bottom: 8px; }
+    .toolkit-row > *:nth-child(even) { padding-top: 4px; }
+  }
+
+  /* ───── RECOGNITION ───── */
+  .recog-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  @media (max-width: 768px) { .recog-split { grid-template-columns: 1fr; gap: 40px; } }
+
+  .recog-h {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 14px;
+  }
+  .recog-list { list-style: none; }
+  .recog-list li {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--rule);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    align-items: baseline;
+  }
+  .recog-list li:last-child { border-bottom: none; }
+  .recog-list .date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* ───── CONTACT ───── */
+  #contact {
+    background: var(--bg-deep);
+    color: var(--bg);
+    padding: 120px 0 80px;
+    margin-top: 80px;
+  }
+  #contact .section-mark { color: rgba(255,255,255,0.4); }
+  #contact .section-mark::after { background: rgba(255,255,255,0.15); }
+  #contact .section-title { color: var(--bg); }
+  #contact .section-title .it { color: #f4a8b8; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .contact-lead {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+  }
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 16px 28px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    transition: all .3s;
+  }
+  .contact-email:hover {
+    background: var(--bg);
+    color: var(--bg-deep);
+    border-color: var(--bg);
+  }
+  .contact-email::after {
+    content: '→';
+    font-family: var(--font-display);
+    transition: transform .3s;
+  }
+  .contact-email:hover::after { transform: translateX(4px); }
+
+  .contact-side {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+  }
+  .contact-side strong {
+    display: block;
+    color: var(--bg);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+  }
+
+  /* ───── Reveal Animation ───── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    .hero { padding: 130px 0 80px; }
+    .nav-links { display: none; }
+    .container { padding: 0 20px; }
+  }
+
+  ::selection { background: var(--accent); color: var(--bg); }
 </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>강 건</h1>
-  <div class="subtitle">다우기술 커머스 플랫폼 서비스 기획 지원 | 경력 13년</div>
-  <div class="contact-row">
-    <span>📞 010-7333-3700</span>
-    <span>✉ k.ddokan@gmail.com</span>
-    <span>📍 서울시 관악구 관악로30길 27</span>
-  </div>
-  <div class="info-row">
-    <span>생년월일 1985. 02. 01 (만 41세)</span>
-    <span>입사시기 채용 확정 후 3주 이내</span>
-  </div>
-</div>
-
-<!-- CORE COMPETENCY -->
-<div class="competency-box">
-  <div class="headline">B2B 커머스 플랫폼의 주문·정산·파트너 운영을 시스템과 데이터로 설계해온 PM</div>
-  <ul>
-    <li><strong>B2B 커머스 플랫폼 0→1 구축 E2E 경험:</strong> 30+ 제휴사 대상 OpenAPI 기반 셀프서비스 플랫폼을 3개 부서 15명 TF로 0→1 구축, 정책·프로세스 설계부터 PRD 작성, MVP→파일럿→전면 오픈까지 단계별 실행 총괄 — 상품 출시 기간 <b>75% 단축</b>, 거래액 <b>2배</b> 성장</li>
-    <li><strong>대규모 파트너 주문·정산 프로세스 시스템 설계:</strong> 1,500개 대리점 월 100억 정산을 BM별 기준 통합 TF와 빌링 시스템 모듈 신설(PRD 작성·개발 리딩)로 자동화하여 오정산 손실 <b>90% 감소</b>. 무신사 8,000+ 파트너 CX Score·등급 체계 0→1 설계 및 노출·프로모션·정산 연동 확대 추진</li>
-    <li><strong>데이터·VOC 기반 구조적 문제 정의:</strong> 쿠팡 10만건+ 배송·반품 데이터 분석으로 오배송 클레임 <b>41% 감소</b>, 연 <b>18억원</b> 절감. 무신사 월 13만건+ VOC를 58개 유형으로 구조화, 61개 실행 번들로 패키징하여 전체 문의 약 <b>40%</b> 영역을 구조적 개선 대상으로 과제화</li>
-    <li><strong>크로스펑셔널 정책·로드맵 수립:</strong> KT 영업·재무·운영 합동 TF로 BM별 상이한 정산 기준을 전사 공통 Business Rule로 통합. 쿠팡 물류·CS·UX리서치 다부서 협업으로 반품 카테고리 3-depth 재설계, 오분류율 30→<b>5%</b> 개선</li>
-  </ul>
-</div>
-
-<!-- CAREER SUMMARY TABLE -->
-<div class="section">
-  <div class="section-title">경력사항</div>
-  <table class="career-table">
-    <tr><th>회사명</th><th>부서</th><th>직책</th><th>근무기간</th></tr>
-    <tr><td>㈜무신사</td><td>운영기획팀</td><td>PM</td><td>2024.11 ~ 현재</td></tr>
-    <tr><td>㈜쿠팡</td><td>CX Innovation</td><td>팀장</td><td>2023.03 ~ 2024.07</td></tr>
-    <tr><td>㈜케이티</td><td>유통채널기획 / 클라우드서비스기획</td><td>과장</td><td>2015.01 ~ 2023.03</td></tr>
-    <tr><td>㈜엘지유플러스</td><td>서부본부 영업추진팀</td><td>사원</td><td>2011.09 ~ 2014.04</td></tr>
-  </table>
-</div>
-
-<!-- DETAILED CAREER -->
-<div class="section">
-  <div class="section-title">상세 경력 기술</div>
-
-  <!-- MUSINSA -->
-  <div class="company-block">
-    <div class="company-header">㈜무신사 운영기획팀 PM | 2024.11 ~ 현재</div>
-    <div class="company-role">담당: 파트너 품질 관리 체계(CX Score·등급) 프로덕트 기획·구축 및 VOC 기반 플랫폼 정책·기능 개선 총괄</div>
-
-    <div class="project">
-      <div class="project-title">1. 파트너 품질 관리 체계(PQP) 0→1 설계 — CX Score·등급 체계·운영 연동 로드맵</div>
-      <div class="project-context"><strong>상황</strong> 8,000+ 파트너사의 출고·CS·상품 품질 편차로 고객경험 일관성 저해. 파트너별 준수 현황을 상시 측정하고 운영 정책과 연동하는 시스템 부재</div>
-      <ul class="project-actions">
-        <li>고객 생애주기 전 단계에 걸쳐 파트너 미준수 손실을 유형별(Lost GMV·LTV 훼손·CS 비용)로 정량화, 문제 성격에 따라 '기준 고지+넛징'·'시스템 자동화+Score 반영'·'상품/파트너 단위 즉각 조치'로 해결 접근 차등 설계</li>
-        <li>출고준수율·배송완료율·교환처리속도·환불처리속도·고객클레임률·CS응답률 6개 핵심 지표 정의 및 가중치 모델링으로 파트너 통합 품질 점수(CX Score) 산출 체계 설계, Score 기반 등급별 혜택과 제재를 인센티브-제재 균형 구조로 설계</li>
-        <li>출고 기준을 '송장 등록'에서 '택배사 실제 집하 확인'으로 재정의, 옵션별 출고기한 설정 기능 도입 — PRD 작성 및 개발 협업, 준수율 기반 상품 노출 알고리즘 연동</li>
-        <li>경쟁사 벤치마킹(네이버 굿서비스·쿠팡 판매자 점수·지그재그 Z-Quality) 기반 CX Score의 노출·프로모션·정산 연동 범위 확대를 위한 경영진 대상 단계적 도입 로드맵 수립</li>
-      </ul>
-      <div class="project-result">→ 역대 최대 주문량 '25년 무진장' 기간 출고준수율 <strong>97%</strong>(전년 대비 5%p 개선), CX Score 기반 파트너 등급 체계 구축 및 연동 범위 전사 확대 추진</div>
-    </div>
-
-    <div class="project">
-      <div class="project-title">2. VOC Feedback Loop 체계 구축 — 고객 문의 근본원인 분석 기반 플랫폼 정책·기능 개선</div>
-      <div class="project-context"><strong>상황</strong> 월 13만건+ 고객 문의가 채널별 개별 대응 구조로 처리, 반복 문의의 근본원인을 구조적으로 분석하고 플랫폼 정책·기능 개선으로 연결하는 Closed Loop 프로세스 부재</div>
-      <ul class="project-actions">
-        <li>전체 155개 문의 유형 중 인입 비중 0.3% 이상인 상위 58개 유형 선정(전체 인입의 91.7%), 유형별 1,000건 샘플링 후 AI+담당자 이중 검증으로 근본원인 분석</li>
-        <li>98개 개선 아이템을 유사 해결책 기준으로 그룹화 → Tech 32개·운영 29개 총 61개 실행 번들로 패키징, 번들별 CR(Contact Rate) 예상 감소분 산출하여 우선순위 결정</li>
-        <li>긴급 이상징후 실시간 감지(Red Flag)와 반복 문의 구조적 개선(VOC Feedback Loop)으로 대응 체계 이원화, 과제별 오너십 부서 지정 및 QuickSight 대시보드 구축</li>
-      </ul>
-      <div class="project-result">→ 전체 고객 문의의 약 <strong>40%</strong> 영역을 구조적 개선 대상으로 과제화(테크 24.14% + 운영 15.9%), VOC → 분석 → 개선 → 측정의 Closed Loop 운영 체계 정착</div>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-mark"><em>Kan</em> Gang.</span>
+    <div class="nav-links">
+      <a href="#impact">Impact</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
+</nav>
 
-  <!-- COUPANG -->
-  <div class="company-block">
-    <div class="company-header">㈜쿠팡 CX Innovation 팀장 | 2023.03 ~ 2024.07</div>
-    <div class="company-role">담당: 배송 품질 개선을 위한 데이터 분석·시스템 기획 및 반품 분류 체계 프로덕트 설계</div>
-
-    <div class="project">
-      <div class="project-title">1. 데이터 분석 기반 오배송 재발 방지 시스템 설계 및 구축</div>
-      <div class="project-context"><strong>상황</strong> 오배송으로 연간 100억원 손실, 주간 1만건+ 클레임 발생. 원인별 발생 비중·패턴이 체계적으로 분석되지 않은 상태</div>
-      <ul class="project-actions">
-        <li>10만건 배송 데이터 + 5만건 오배송 사진 분석으로 주소 유사성·동일 건물 내 호수 오인 등 근본원인 유형별 발생 비중 규명</li>
-        <li>물류팀 협업으로 배송 기사용 앱 내 'TIP' 기능 설계 — 과거 오배송 이력 기반 유사 주소·특이사항 알림 자동 표시, 기사가 현장 특이사항을 직접 기입·축적하는 현장 참여형 구조. PRD 작성 및 개발 협업</li>
-        <li>반복 오배송 다발 지역 집중 관리 리스트 운영, CS팀 협업 선제적 고객 안내 프로세스 실행</li>
-      </ul>
-      <div class="project-result">→ 오배송 관련 클레임 <strong>41%</strong> 감소, 오배송률 <strong>15%</strong> 감소(업계 최저 수준), 연간 <strong>18억원</strong> 절감, 물류혁신 우수 프로젝트 선정('23년 하반기)</div>
-    </div>
-
-    <div class="project">
-      <div class="project-title">2. 교환/반품 사유 카테고리 재설계 — 운영자/사용자 UX 개선 및 분류 체계 프로덕트 기획</div>
-      <div class="project-context"><strong>상황</strong> 부정확한 반품 사유 카테고리로 전체 반품 30% 오분류, 품질 이슈 원인 추적 및 파트너 피드백 불가, 연간 5억원 불필요 비용 발생</div>
-      <ul class="project-actions">
-        <li>SQL/Python 기반 10만건 반품 데이터 분석 및 텍스트 마이닝으로 고객 입력 사유와 실제 반품 원인 간 불일치 패턴을 유형화하여 오분류 핵심 원인 규명</li>
-        <li>UX리서치팀 협조로 1,500명 고객 사유 선택 행태 조사 결과 확보, 원인 추적 가능한 3-depth 카테고리 체계 재수립 후 A/B 테스트로 검증</li>
-        <li>반품 접수 시 이미지 업로드 기능 PRD 작성 및 개발 리딩, 사유-이미지 매칭 품질 이슈 DB 구축으로 파트너 품질 이슈 유형별 피드백 제공 기반 마련</li>
-      </ul>
-      <div class="project-result">→ 오분류율 30%→<strong>5%</strong>(연간 <strong>4억원+</strong> 절감), 재입고 소요시간 <strong>15%</strong> 단축, 파트너 피드백 체계 기반 확립</div>
-    </div>
-
-    <div class="project">
-      <div class="project-title">3. 배송 단계별 파손 근본원인 규명 및 포장·운영 프로세스 최적화</div>
-      <div class="project-context"><strong>상황</strong> 로켓배송 상품 파손율 1.0%, 주 평균 10억원 교환/반품 처리 비용. 파손 집중 구간 미특정</div>
-      <ul class="project-actions">
-        <li>상품군×배송단계별 파손 매트릭스 분석으로 단계·품목별 파손 집중 구간 특정, A/B 테스트(n=50,000)로 포장재 옵션별 파손율·비용·작업시간 최적 조합 검증</li>
-        <li>물류센터 운영팀과 공동 TF 구성, 취급주의 상품군 재분류 및 포장 SOP 표준화</li>
-      </ul>
-      <div class="project-result">→ 파손 관련 교환/반품 <strong>25%</strong> 감소, 포장 생산성(HTP) <strong>1.1배</strong> 향상</div>
+<!-- ─────────────── HERO ─────────────── -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-meta reveal">Product Manager · Since 2011</div>
+    <h1 class="reveal">강건<span class="it">.</span></h1>
+    <div class="hero-subname reveal"><em>Kan Gang</em> · Logan</div>
+    <p class="hero-lead reveal">
+      대규모 파트너·운영 생태계의 <em>복잡한 기준·정산·품질 문제</em>를 데이터로 정의하고, 정책과 시스템으로 반복 가능하게 만들어온 13년차 Product Manager.
+    </p>
+    <div class="hero-tag reveal">
+      <span class="dot"></span>
+      현재 무신사 운영기획팀 PM · 새로운 도전 검토 중
     </div>
   </div>
+</header>
 
-  <!-- KT -->
-  <div class="company-block">
-    <div class="company-header">㈜케이티 유통채널기획 / 클라우드서비스기획 과장 | 2015.01 ~ 2023.03</div>
-    <div class="company-role">담당: OpenAPI 기반 파트너 플랫폼 0→1 구축, 가맹점 정산 시스템 자동화, 1,500개 대리점 정책·KPI 거버넌스, CRM 시스템 기획</div>
+<!-- ─────────────── IMPACT ─────────────── -->
+<section id="impact">
+  <div class="container">
+    <div class="section-mark reveal" data-num="01 / "></div>
+    <h2 class="section-title reveal">숫자로 본 <span class="it">임팩트</span></h2>
 
-    <div class="project">
-      <div class="project-title">1. 클라우드 마켓플레이스 0→1 구축 — OpenAPI 기반 파트너 온보딩·정산 셀프서비스 플랫폼</div>
-      <div class="project-context"><strong>상황</strong> 30개 이상 제휴사 상품의 수기 온보딩으로 등록·수정에 약 2개월 소요, 정산 역시 수작업 기반으로 사업 확장 병목. B2B SaaS 마켓플레이스 도입 필요</div>
-      <ul class="project-actions">
-        <li>30개+ 제휴사 인터뷰 + 네이버클라우드 등 경쟁사 벤치마킹 → OpenAPI 기반 셀프서비스 플랫폼 방향성·요건 정의: 상품등록·수정·모니터링 자동화 및 정산 연동의 정책·프로세스 수립. 외부 제휴사 시스템과의 API 연동 규격 정의 및 PRD 작성</li>
-        <li>파트너 셀프서비스 어드민 기능 정의: 프로모션 등록·가격 변경·구독 플랜 관리·사용량 모니터링 등 파트너가 직접 운영할 수 있는 기능 설계, 온보딩 가이드·운영 정책 문서화</li>
-        <li>영업·개발·운영 3개 부서 15명 T/F 리딩(10개월), PRD 작성·개발 진행 직접 총괄, MVP→파일럿→전면 오픈 단계별 실행</li>
-      </ul>
-      <div class="project-result">→ 상품 온보딩 약 2개월 → 2주 이내(<strong>75% 단축</strong>), 거래액 <strong>2배</strong> 성장, 제휴 상품 최신화율 <strong>95%</strong>, 파트너 운영 부담 대폭 경감</div>
+    <div class="impact-grid reveal">
+      <div class="impact-cell">
+        <div class="impact-number">97<span style="font-size:0.6em">%</span></div>
+        <div class="impact-label">파트너 출고준수율 (YoY +5%p)</div>
+        <div class="impact-source">Musinsa · 2025</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-number">18<span style="font-size:0.5em">억</span></div>
+        <div class="impact-label">오배송 시스템 개선 연간 절감</div>
+        <div class="impact-source">Coupang · 2023</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-number">75<span style="font-size:0.6em">%</span></div>
+        <div class="impact-label">B2B 마켓플레이스 상품 출시 단축</div>
+        <div class="impact-source">KT Cloud · 2022</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-number">90<span style="font-size:0.6em">%</span></div>
+        <div class="impact-label">대리점 정산 오류 손실 감소</div>
+        <div class="impact-source">KT · 2020</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-number">3<span style="font-size:0.5em">배</span></div>
+        <div class="impact-label">800만 고객 CRM 캠페인 반응률<br>(CEO 표창)</div>
+        <div class="impact-source">KT · 2019</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── APPROACH ─────────────── -->
+<section id="approach">
+  <div class="container">
+    <div class="section-mark reveal" data-num="02 / "></div>
+    <h2 class="section-title reveal">일을 푸는 <span class="it">네 가지 방식</span></h2>
+
+    <div class="approach-grid">
+      <div class="approach-item reveal">
+        <div class="approach-num">— 01</div>
+        <div class="approach-title">증명된 비즈니스 임팩트</div>
+        <p class="approach-desc">감과 의견이 아니라 데이터로 정의된 문제, 검증된 가설, 정량적으로 환산되는 성과. 세 회사에서 일관되게 18억·90%·75%·3배의 수치로 임팩트를 만들었습니다.</p>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-num">— 02</div>
+        <div class="approach-title">플랫폼 생태계 설계</div>
+        <p class="approach-desc">파트너·플랫폼·고객 세 축이 인센티브로 정렬되는 Win-Win 구조. 8,000+ 파트너 CX Score, 30+ 제휴사 마켓플레이스, 800만 고객 CRM이 동일한 설계 사고에서 나왔습니다.</p>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-num">— 03</div>
+        <div class="approach-title">0→1 리더십</div>
+        <p class="approach-desc">아무것도 없던 자리에서 정책·요건·PRD를 정의하고 다부서 TF를 리딩해 MVP→파일럿→전면 오픈까지 끌고 갑니다. KT 마켓플레이스, 무신사 PQP, VOC Feedback Loop가 그 결과입니다.</p>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-num">— 04</div>
+        <div class="approach-title">데이터 기반 근본 문제 해결</div>
+        <p class="approach-desc">10만 건 단위의 운영 데이터에서 근본원인을 규명한 뒤, 시스템·정책으로 구조적 해결책을 만듭니다. 표면적 개선이 아니라 재발하지 않는 변화를 목표로 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── EXPERIENCE ─────────────── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-mark reveal" data-num="03 / "></div>
+    <h2 class="section-title reveal">경력 <span class="it">타임라인</span></h2>
+
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-year">2024 — 현재</div>
+        <div>
+          <div class="exp-company">㈜무신사</div>
+          <div class="exp-role">운영기획팀 PM</div>
+        </div>
+        <div class="exp-summary">
+          본부 직속 PM 조직에서 8,000+ 파트너의 품질관리 체계(PQP)와 월 13만건+ VOC 기반 플랫폼 정책·기능 개선을 총괄. CX Score 기반 등급 체계 0→1 설계로 출고준수율 97%(YoY +5%p) 달성.
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-year">2023 — 2024</div>
+        <div>
+          <div class="exp-company">㈜쿠팡</div>
+          <div class="exp-role">CX Innovation 팀장</div>
+        </div>
+        <div class="exp-summary">
+          배송 품질 개선을 위한 데이터 분석 기반 시스템 기획. 오배송 근본원인 규명·기사 앱 'TIP' 기능 설계로 클레임 41% 감소·연 18억 절감, 물류혁신 우수 프로젝트 선정. 반품 카테고리 재설계로 오분류율 30%→5%.
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-year">2015 — 2023</div>
+        <div>
+          <div class="exp-company">㈜케이티</div>
+          <div class="exp-role">유통채널기획 / 클라우드서비스기획 과장</div>
+        </div>
+        <div class="exp-summary">
+          1,500개 대리점의 정산·CRM·KPI 시스템 기획에서 출발해 핵심인재 선발 후 B2B 클라우드 마켓플레이스 0→1 구축으로 직무 확장. 정산 자동화(오정산 90%↓), 800만 고객 CRM(CEO 표창), OpenAPI 마켓플레이스(거래액 2배).
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-year">2011 — 2014</div>
+        <div>
+          <div class="exp-company">㈜엘지유플러스</div>
+          <div class="exp-role">서부본부 영업추진팀 사원</div>
+        </div>
+        <div class="exp-summary">
+          데이터 기반 지역 영업 전략 수립과 대형 유통점 제휴 운영. 6개 상권 유형 분류·하이마트 등 유통점 제휴 SOP 수립으로 체험존 12→57개 확대, 유무선 가입자 150% 성장.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── WORK ─────────────── -->
+<section id="work">
+  <div class="container">
+    <div class="section-mark reveal" data-num="04 / "></div>
+    <h2 class="section-title reveal">대표 <span class="it">프로젝트</span></h2>
+
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">Musinsa</span>
+          <span>2024 — Current</span>
+        </div>
+        <h3 class="work-title">파트너 품질 관리 체계(PQP) 0→1</h3>
+        <p class="work-desc">
+          8,000+ 파트너의 출고·CS·상품 품질 편차를 통합 측정하는 체계가 부재. 출고준수율·배송완료율·교환환불 처리속도·클레임률·CS응답률 등 6개 핵심 지표를 정의하고 가중치 모델링으로 CX Score를 설계. 출고 기준을 '송장 등록'에서 '택배사 실제 집하 확인'으로 재정의.
+        </p>
+        <div class="work-result">
+          역대 최대 주문량 '25 무진장 기간 <strong>출고준수율 97%</strong> 달성 (전년 대비 5%p 개선). 노출·프로모션·정산 연동 범위 전사 확대 추진.
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">Musinsa</span>
+          <span>2024 — Current</span>
+        </div>
+        <h3 class="work-title">VOC Feedback Loop 체계 구축</h3>
+        <p class="work-desc">
+          월 13만건+ 고객 문의가 채널별 개별 대응 구조로 처리되어 반복 문의 근본원인 분석·플랫폼 개선 연결 체계가 부재. 상위 58개 문의 유형 선정, 유형별 1,000건 샘플링·AI 이중 검증으로 근본원인을 분석한 뒤 98개 개선 아이템을 61개 실행 번들로 패키징.
+        </p>
+        <div class="work-result">
+          전체 고객 문의의 약 <strong>40% 영역</strong>을 구조적 개선 대상으로 과제화. VOC→분석→개선→측정 Closed Loop 운영 체계 정착.
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">Coupang</span>
+          <span>2023</span>
+        </div>
+        <h3 class="work-title">데이터 기반 오배송 재발 방지 시스템</h3>
+        <p class="work-desc">
+          연간 100억 손실·주간 1만건+ 클레임 발생하는 오배송 문제. 10만건 배송 데이터와 5만건 사진을 분석해 주소 유사성·동일 건물 호수 오인 등 근본원인을 유형별로 규명. 배송 기사용 앱 'TIP' 기능을 설계(과거 오배송 이력 기반 알림 + 기사 직접 입력 축적 구조).
+        </p>
+        <div class="work-result">
+          오배송 클레임 <strong>41% 감소</strong>, 오배송률 15% 감소(업계 최저), <strong>연 18억원 절감</strong>. 물류혁신 우수 프로젝트 선정.
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">Coupang</span>
+          <span>2024</span>
+        </div>
+        <h3 class="work-title">반품 카테고리 재설계 · PRD</h3>
+        <p class="work-desc">
+          부정확한 반품 사유 카테고리로 전체 반품 30% 오분류, 품질 이슈 원인 추적 및 파트너 피드백 불가. 10만건 반품 데이터 텍스트 마이닝으로 오분류 핵심 원인 규명, 원인 추적 가능한 3-depth 카테고리 체계 재수립. 이미지 업로드 기능 PRD 작성·개발 협업.
+        </p>
+        <div class="work-result">
+          오분류율 30% → <strong>5%</strong>, 연 4억원+ 절감, 재입고 소요시간 15% 단축. 파트너 품질 피드백 체계 기반 확립.
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">KT Cloud</span>
+          <span>2022</span>
+        </div>
+        <h3 class="work-title">OpenAPI 기반 B2B 마켓플레이스 0→1</h3>
+        <p class="work-desc">
+          30+ 제휴사 상품의 수기 온보딩으로 등록·수정 약 2개월 소요, 정산 역시 수작업 기반의 병목. 30+ 제휴사 인터뷰와 경쟁사 벤치마킹으로 OpenAPI 기반 셀프서비스 플랫폼 방향성·요건 정의. 영업·개발·운영 3개 부서 15명 TF를 10개월 리딩, PRD 작성부터 MVP→파일럿→전면 오픈까지 단계별 실행.
+        </p>
+        <div class="work-result">
+          상품 출시 기간 <strong>75% 단축</strong>(2개월→2주), 거래액 2배 성장, 제휴 상품 최신화율 95%.
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-meta">
+          <span class="work-company">KT</span>
+          <span>2020</span>
+        </div>
+        <h3 class="work-title">가맹점 정산 시스템 자동화</h3>
+        <p class="work-desc">
+          1,500개 대리점 월 100억 예산 정산을 수기 처리(10% 정산 누락), BM별로 상이한 정산 기준으로 현장 혼란. 영업·재무·운영 합동 TF를 구성해 전사 공통 Business Rule을 통합 수립, 빌링 시스템 내 가맹점 정책 관리 모듈 신설(PRD 작성·개발 리딩). Power BI 실시간 대시보드 구축.
+        </p>
+        <div class="work-result">
+          오정산 재무 손실 <strong>90% 감소</strong>, Man-Month 70% 절감, 정책 집행 효과성 20% 향상.
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── TOOLKIT ─────────────── -->
+<section id="toolkit">
+  <div class="container">
+    <div class="section-mark reveal" data-num="05 / "></div>
+    <h2 class="section-title reveal">실무 <span class="it">도구</span></h2>
+
+    <div class="toolkit-grid">
+      <div class="toolkit-row reveal">
+        <div class="toolkit-cat">데이터 분석</div>
+        <div class="toolkit-items">
+          <span>SQL</span><span>Python</span><span>텍스트 마이닝</span><span>A/B Test</span><span>Tableau</span><span>Power BI</span><span>QuickSight</span><span>Google Analytics</span>
+        </div>
+      </div>
+      <div class="toolkit-row reveal">
+        <div class="toolkit-cat">프로덕트 기획</div>
+        <div class="toolkit-items">
+          <span>PRD 작성</span><span>요건 정의</span><span>API 연동 규격</span><span>MVP→파일럿→전면 오픈</span><span>개발 프로세스 리딩</span><span>Jira</span><span>Confluence</span>
+        </div>
+      </div>
+      <div class="toolkit-row reveal">
+        <div class="toolkit-cat">정책·정산 설계</div>
+        <div class="toolkit-items">
+          <span>파트너 품질 정책</span><span>SLA·Scorecard</span><span>빌링·정산 시스템</span><span>Business Rule</span><span>KPI 거버넌스</span><span>크로스펑셔널 PMO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── RECOGNITION ─────────────── -->
+<section id="recognition">
+  <div class="container">
+    <div class="section-mark reveal" data-num="06 / "></div>
+    <h2 class="section-title reveal">수상 · <span class="it">자격</span></h2>
+
+    <div class="recog-split">
+      <div class="reveal">
+        <div class="recog-h">Recognition</div>
+        <ul class="recog-list">
+          <li>
+            <span>쿠팡 물류혁신 우수 프로젝트 선정<br><small style="color:var(--ink-mute)">오배송 축소, 연 18억원 절감</small></span>
+            <span class="date">2023.11</span>
+          </li>
+          <li>
+            <span>KT 핵심인재 선발 · Cloud 서비스 기획 전문가 과정 이수</span>
+            <span class="date">2021.12</span>
+          </li>
+          <li>
+            <span>KT Customer 부문 신규 사업 발굴 공모전 대상</span>
+            <span class="date">2021.11</span>
+          </li>
+          <li>
+            <span>KT CEO 표창<br><small style="color:var(--ink-mute)">고객 세그먼테이션 CRM 마케팅 성과</small></span>
+            <span class="date">2019.12</span>
+          </li>
+          <li>
+            <span>KT 최우수 신입사원 수상 (종합점수 1위)</span>
+            <span class="date">2015.04</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <div class="recog-h">Certifications</div>
+        <ul class="recog-list">
+          <li><span>HackerRank SQL — Advanced</span><span class="date">2026.04</span></li>
+          <li><span>Google Data Analytics Professional</span><span class="date">2026.04</span></li>
+          <li><span>Google Analytics Certification (갱신)</span><span class="date">2026.04</span></li>
+          <li><span>Introduction to Data Analysis Using Python</span><span class="date">2026.04</span></li>
+          <li><span>ADsP — 데이터분석준전문가<br><small style="color:var(--ink-mute)">한국데이터산업진흥원</small></span><span class="date">2022.11</span></li>
+          <li><span>정보처리기사<br><small style="color:var(--ink-mute)">한국산업인력공단</small></span><span class="date">2010.12</span></li>
+        </ul>
+
+        <div class="recog-h" style="margin-top:40px;">Education</div>
+        <ul class="recog-list">
+          <li>
+            <span>한국기술교육대학교<br><small style="color:var(--ink-mute)">컴퓨터공학과 · 학점 3.5 / 4.5</small></span>
+            <span class="date">2004 — 2011</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── CONTACT ─────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-mark reveal" data-num="07 / "></div>
+    <h2 class="section-title reveal">함께 풀어볼 <span class="it">문제가 있다면</span>.</h2>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-lead">
+          파트너 생태계·정산·품질·VOC 같은 복잡한 운영 문제를 시스템으로 풀어내는 일에 관심 있습니다. 채용·협업 제안 모두 환영합니다.
+        </p>
+        <a href="mailto:k.ddokan@gmail.com" class="contact-email">k.ddokan@gmail.com</a>
+      </div>
+
+      <div class="contact-side reveal">
+        <strong>Open to</strong>
+        커머스 플랫폼 PM / PO<br>
+        B2B SaaS Product<br>
+        파트너·셀러 운영 기획<br>
+        정산·빌링 시스템 기획<br>
+        CX·운영기획 리더<br><br>
+
+        <strong>Based in</strong>
+        Seoul, Korea<br><br>
+
+        <strong>Last updated</strong>
+        2026.05
+      </div>
     </div>
 
-    <div class="project">
-      <div class="project-title">2. 가맹점 정책 정산 시스템 자동화 — Business Rule 통합 및 빌링 시스템 모듈 신설</div>
-      <div class="project-context"><strong>상황</strong> 전국 1,500개 대리점 대상 월 100억 예산 정산을 수기 처리, 10% 정산 누락 발생. BM(사업부서)별 개통 실적·고객 유지율·부가서비스 가입 등 정산 기준이 제각각이어서 현장 혼란 및 정산 오류 반복</div>
-      <ul class="project-actions">
-        <li>현장 대리점 방문·점주 인터뷰로 핵심 페인포인트 도출. BM별 상이한 정산 기준을 통합하기 위해 영업·재무·운영 합동 TF 구성, 전사 공통 Business Rule 수립으로 부서간 기준 충돌 해소</li>
-        <li>IT개발팀 협업으로 전사 빌링 시스템 내 '가맹점 정책 관리 모듈' 신설 — PRD 작성·요건 정의·개발 진행 직접 리딩</li>
-        <li>Power BI 실시간 대시보드 구축으로 정산 현황·정책 집행률 모니터링 체계 확립, 대리점 정산 투명성 확보</li>
-      </ul>
-      <div class="project-result">→ 오정산 재무 손실 <strong>90% 감소</strong>, Man-Month <strong>70% 절감</strong>, 정책 집행 효과성 <strong>20%</strong> 향상</div>
-    </div>
-
-    <div class="project">
-      <div class="project-title">3. 800만 고객 세그먼테이션 기반 개인화 리텐션 마케팅 시스템</div>
-      <div class="project-context"><strong>상황</strong> 전 고객 동일 프로모션 적용, 반응률 2% 미만</div>
-      <ul class="project-actions">
-        <li>800만 고객 데이터 분석 → 5개 핵심 세그먼트 도출, 전국 1,500개 대리점 CRM 시스템 연동으로 세그먼트별 차별화 상담·추천 자동화</li>
-      </ul>
-      <div class="project-result">→ 캠페인 반응률 기존 대비 <strong>3배</strong> 향상, 재가입률 <strong>5%p</strong> 향상, KT CEO 표창('19.12)</div>
-    </div>
+    <footer>
+      <span>© 2026 Kan Gang</span>
+      <span>Designed & Built by author</span>
+    </footer>
   </div>
+</section>
 
-  <!-- LGU+ -->
-  <div class="company-block">
-    <div class="company-header">㈜엘지유플러스 서부본부 영업추진팀 사원 | 2011.09 ~ 2014.04</div>
-    <div class="company-role">담당: 데이터 기반 지역 영업 전략 수립 및 대형 유통채널 제휴 운영</div>
-    <ul class="inline-actions">
-      <li>방문 고객 데이터 분석 기반 6개 상권 유형 분류, 상권별 맞춤 영업/프로모션 KPI 수립</li>
-      <li>하이마트 등 대형 유통점 제휴 운영 SOP 수립, 체험존 12→57개 확대 → 유무선 가입자 150% 성장, 시장 점유율 5%p 향상</li>
-    </ul>
-  </div>
-</div>
+<script>
+  // Staggered reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => io.observe(el));
 
-<!-- SKILLS -->
-<div class="section">
-  <div class="section-title">보유 기술</div>
-  <table class="skill-table">
-    <tr><th>데이터 분석·검증</th><td>SQL, Python, 텍스트 마이닝, A/B 테스트 설계, Tableau, Power BI, QuickSight, Google Analytics</td></tr>
-    <tr><th>프로덕트 기획·리딩</th><td>PRD 작성, 요건 정의, API 연동 규격 설계, MVP→파일럿→전면 오픈 단계별 실행, 개발 프로세스 리딩, Jira/Confluence 기반 프로젝트 관리</td></tr>
-    <tr><th>정책·정산 설계</th><td>파트너 품질 정책 수립, SLA·스코어링 모델 설계, 빌링·정산 시스템 기획, Business Rule 정의, KPI 거버넌스</td></tr>
-    <tr><th>자격증</th><td>정보처리기사 | ADsP | HackerRank SQL (Advanced) | Google Analytics Certification | Google Data Analytics Professional Certificate</td></tr>
-  </table>
-</div>
-
-<!-- AWARDS -->
-<div class="section">
-  <div class="section-title">수상 및 활동</div>
-  <ul class="award-list">
-    <li><span>쿠팡 물류혁신 우수 프로젝트 선정 (오배송 축소, 연 18억원 절감)</span><span class="date">2023년 하반기</span></li>
-    <li><span>KT 핵심인재 선발 및 Cloud 서비스 기획 전문가 과정 이수</span><span class="date">2021.12 ~ 2022.04</span></li>
-    <li><span>KT Customer 부문 신규 사업 발굴 공모전 대상</span><span class="date">2021.11</span></li>
-    <li><span>KT CEO 표창 (고객 세그먼테이션 CRM 마케팅 성과)</span><span class="date">2019.12</span></li>
-    <li><span>KT 최우수 신입사원 수상 (종합점수 1위)</span><span class="date">2015.04</span></li>
-  </ul>
-</div>
-
-<!-- EDUCATION -->
-<div class="section">
-  <div class="section-title">학력사항</div>
-  <div class="edu-row">
-    <span>한국기술교육대학교 컴퓨터공학과 (학점 3.5/4.5)</span>
-    <span>2004.03 ~ 2011.02</span>
-  </div>
-</div>
-
-<!-- MILITARY -->
-<div class="section">
-  <div class="section-title">병역사항</div>
-  <div class="edu-row">
-    <span>육군 병장 만기제대</span>
-    <span>2005.01 ~ 2007.01</span>
-  </div>
-</div>
+  // Initial hero reveal (no scroll needed)
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('in'), 120 + i * 130);
+    });
+  });
+</script>
 
 </body>
 </html>
