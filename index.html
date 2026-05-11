@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>강건 이력서 - 다우기술 커머스 플랫폼 서비스 기획</title>
+<style>
+  @page { size: A4; margin: 15mm 18mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 9.5pt; line-height: 1.65; color: #1a1a1a; max-width: 210mm; margin: 0 auto; padding: 15mm 18mm; }
+
+  .header { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #1a1a1a; }
+  .header h1 { font-size: 22pt; font-weight: 800; letter-spacing: -0.5px; }
+  .header .subtitle { font-size: 10.5pt; color: #444; margin: 4px 0 10px; }
+  .contact-row { display: flex; gap: 18px; font-size: 8.5pt; color: #555; flex-wrap: wrap; }
+  .info-row { display: flex; gap: 24px; font-size: 8.5pt; color: #555; margin-top: 4px; flex-wrap: wrap; }
+
+  .competency-box { background: #f7f7f7; border-left: 3px solid #1a1a1a; padding: 12px 16px; margin: 14px 0 18px; }
+  .competency-box .headline { font-size: 10pt; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
+  .competency-box ul { list-style: none; padding: 0; }
+  .competency-box li { font-size: 9pt; line-height: 1.7; padding-left: 14px; position: relative; color: #333; margin-bottom: 2px; }
+  .competency-box li::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
+
+  .section { margin-bottom: 16px; margin-top: 20px; }
+  .section-title { font-size: 11pt; font-weight: 800; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-bottom: 10px; }
+
+  .career-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-bottom: 14px; }
+  .career-table th { background: #f0f0f0; padding: 5px 8px; text-align: left; font-weight: 600; border: 1px solid #ddd; }
+  .career-table td { padding: 5px 8px; border: 1px solid #ddd; }
+
+  .company-block { margin-bottom: 18px; }
+  .company-header { font-size: 10pt; font-weight: 700; margin-bottom: 2px; }
+  .company-role { font-size: 8.5pt; color: #555; margin-bottom: 10px; line-height: 1.6; }
+
+  .project { margin: 0 0 13px 4px; padding: 8px 0 8px 14px; border-left: 2.5px solid #d0d0d0; }
+  .project-title { font-size: 9.5pt; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+  .project-context { font-size: 8.5pt; color: #555; margin-bottom: 5px; line-height: 1.6; }
+  .project-actions { padding-left: 13px; margin-bottom: 5px; }
+  .project-actions li { font-size: 8.5pt; line-height: 1.7; color: #333; margin-bottom: 2px; }
+  .project-result { font-size: 9pt; font-weight: 600; color: #1a1a1a; margin-top: 3px; }
+
+  .skill-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-bottom: 6px; }
+  .skill-table th { width: 120px; background: #f0f0f0; padding: 4px 8px; text-align: left; font-weight: 600; border: 1px solid #ddd; }
+  .skill-table td { padding: 4px 8px; border: 1px solid #ddd; }
+
+  .award-list { font-size: 8.5pt; list-style: none; }
+  .award-list li { display: flex; justify-content: space-between; padding: 2px 0; }
+  .award-list .date { color: #777; min-width: 120px; text-align: right; }
+
+  .edu-row { font-size: 8.5pt; display: flex; justify-content: space-between; padding: 2px 0; }
+
+  .inline-actions { padding-left: 13px; }
+  .inline-actions li { font-size: 8.5pt; line-height: 1.7; color: #333; margin-bottom: 2px; }
+
+  @media print {
+    body { padding: 0; }
+    .company-block { page-break-inside: avoid; }
+    .project { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>강 건</h1>
+  <div class="subtitle">다우기술 커머스 플랫폼 서비스 기획 지원 | 경력 13년</div>
+  <div class="contact-row">
+    <span>📞 010-7333-3700</span>
+    <span>✉ k.ddokan@gmail.com</span>
+    <span>📍 서울시 관악구 관악로30길 27</span>
+  </div>
+  <div class="info-row">
+    <span>생년월일 1985. 02. 01 (만 41세)</span>
+    <span>입사시기 채용 확정 후 3주 이내</span>
+  </div>
+</div>
+
+<!-- CORE COMPETENCY -->
+<div class="competency-box">
+  <div class="headline">B2B 커머스 플랫폼의 주문·정산·파트너 운영을 시스템과 데이터로 설계해온 PM</div>
+  <ul>
+    <li><strong>B2B 커머스 플랫폼 0→1 구축 E2E 경험:</strong> 30+ 제휴사 대상 OpenAPI 기반 셀프서비스 플랫폼을 3개 부서 15명 TF로 0→1 구축, 정책·프로세스 설계부터 PRD 작성, MVP→파일럿→전면 오픈까지 단계별 실행 총괄 — 상품 출시 기간 <b>75% 단축</b>, 거래액 <b>2배</b> 성장</li>
+    <li><strong>대규모 파트너 주문·정산 프로세스 시스템 설계:</strong> 1,500개 대리점 월 100억 정산을 BM별 기준 통합 TF와 빌링 시스템 모듈 신설(PRD 작성·개발 리딩)로 자동화하여 오정산 손실 <b>90% 감소</b>. 무신사 8,000+ 파트너 CX Score·등급 체계 0→1 설계 및 노출·프로모션·정산 연동 확대 추진</li>
+    <li><strong>데이터·VOC 기반 구조적 문제 정의:</strong> 쿠팡 10만건+ 배송·반품 데이터 분석으로 오배송 클레임 <b>41% 감소</b>, 연 <b>18억원</b> 절감. 무신사 월 13만건+ VOC를 58개 유형으로 구조화, 61개 실행 번들로 패키징하여 전체 문의 약 <b>40%</b> 영역을 구조적 개선 대상으로 과제화</li>
+    <li><strong>크로스펑셔널 정책·로드맵 수립:</strong> KT 영업·재무·운영 합동 TF로 BM별 상이한 정산 기준을 전사 공통 Business Rule로 통합. 쿠팡 물류·CS·UX리서치 다부서 협업으로 반품 카테고리 3-depth 재설계, 오분류율 30→<b>5%</b> 개선</li>
+  </ul>
+</div>
+
+<!-- CAREER SUMMARY TABLE -->
+<div class="section">
+  <div class="section-title">경력사항</div>
+  <table class="career-table">
+    <tr><th>회사명</th><th>부서</th><th>직책</th><th>근무기간</th></tr>
+    <tr><td>㈜무신사</td><td>운영기획팀</td><td>PM</td><td>2024.11 ~ 현재</td></tr>
+    <tr><td>㈜쿠팡</td><td>CX Innovation</td><td>팀장</td><td>2023.03 ~ 2024.07</td></tr>
+    <tr><td>㈜케이티</td><td>유통채널기획 / 클라우드서비스기획</td><td>과장</td><td>2015.01 ~ 2023.03</td></tr>
+    <tr><td>㈜엘지유플러스</td><td>서부본부 영업추진팀</td><td>사원</td><td>2011.09 ~ 2014.04</td></tr>
+  </table>
+</div>
+
+<!-- DETAILED CAREER -->
+<div class="section">
+  <div class="section-title">상세 경력 기술</div>
+
+  <!-- MUSINSA -->
+  <div class="company-block">
+    <div class="company-header">㈜무신사 운영기획팀 PM | 2024.11 ~ 현재</div>
+    <div class="company-role">담당: 파트너 품질 관리 체계(CX Score·등급) 프로덕트 기획·구축 및 VOC 기반 플랫폼 정책·기능 개선 총괄</div>
+
+    <div class="project">
+      <div class="project-title">1. 파트너 품질 관리 체계(PQP) 0→1 설계 — CX Score·등급 체계·운영 연동 로드맵</div>
+      <div class="project-context"><strong>상황</strong> 8,000+ 파트너사의 출고·CS·상품 품질 편차로 고객경험 일관성 저해. 파트너별 준수 현황을 상시 측정하고 운영 정책과 연동하는 시스템 부재</div>
+      <ul class="project-actions">
+        <li>고객 생애주기 전 단계에 걸쳐 파트너 미준수 손실을 유형별(Lost GMV·LTV 훼손·CS 비용)로 정량화, 문제 성격에 따라 '기준 고지+넛징'·'시스템 자동화+Score 반영'·'상품/파트너 단위 즉각 조치'로 해결 접근 차등 설계</li>
+        <li>출고준수율·배송완료율·교환처리속도·환불처리속도·고객클레임률·CS응답률 6개 핵심 지표 정의 및 가중치 모델링으로 파트너 통합 품질 점수(CX Score) 산출 체계 설계, Score 기반 등급별 혜택과 제재를 인센티브-제재 균형 구조로 설계</li>
+        <li>출고 기준을 '송장 등록'에서 '택배사 실제 집하 확인'으로 재정의, 옵션별 출고기한 설정 기능 도입 — PRD 작성 및 개발 협업, 준수율 기반 상품 노출 알고리즘 연동</li>
+        <li>경쟁사 벤치마킹(네이버 굿서비스·쿠팡 판매자 점수·지그재그 Z-Quality) 기반 CX Score의 노출·프로모션·정산 연동 범위 확대를 위한 경영진 대상 단계적 도입 로드맵 수립</li>
+      </ul>
+      <div class="project-result">→ 역대 최대 주문량 '25년 무진장' 기간 출고준수율 <strong>97%</strong>(전년 대비 5%p 개선), CX Score 기반 파트너 등급 체계 구축 및 연동 범위 전사 확대 추진</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">2. VOC Feedback Loop 체계 구축 — 고객 문의 근본원인 분석 기반 플랫폼 정책·기능 개선</div>
+      <div class="project-context"><strong>상황</strong> 월 13만건+ 고객 문의가 채널별 개별 대응 구조로 처리, 반복 문의의 근본원인을 구조적으로 분석하고 플랫폼 정책·기능 개선으로 연결하는 Closed Loop 프로세스 부재</div>
+      <ul class="project-actions">
+        <li>전체 155개 문의 유형 중 인입 비중 0.3% 이상인 상위 58개 유형 선정(전체 인입의 91.7%), 유형별 1,000건 샘플링 후 AI+담당자 이중 검증으로 근본원인 분석</li>
+        <li>98개 개선 아이템을 유사 해결책 기준으로 그룹화 → Tech 32개·운영 29개 총 61개 실행 번들로 패키징, 번들별 CR(Contact Rate) 예상 감소분 산출하여 우선순위 결정</li>
+        <li>긴급 이상징후 실시간 감지(Red Flag)와 반복 문의 구조적 개선(VOC Feedback Loop)으로 대응 체계 이원화, 과제별 오너십 부서 지정 및 QuickSight 대시보드 구축</li>
+      </ul>
+      <div class="project-result">→ 전체 고객 문의의 약 <strong>40%</strong> 영역을 구조적 개선 대상으로 과제화(테크 24.14% + 운영 15.9%), VOC → 분석 → 개선 → 측정의 Closed Loop 운영 체계 정착</div>
+    </div>
+  </div>
+
+  <!-- COUPANG -->
+  <div class="company-block">
+    <div class="company-header">㈜쿠팡 CX Innovation 팀장 | 2023.03 ~ 2024.07</div>
+    <div class="company-role">담당: 배송 품질 개선을 위한 데이터 분석·시스템 기획 및 반품 분류 체계 프로덕트 설계</div>
+
+    <div class="project">
+      <div class="project-title">1. 데이터 분석 기반 오배송 재발 방지 시스템 설계 및 구축</div>
+      <div class="project-context"><strong>상황</strong> 오배송으로 연간 100억원 손실, 주간 1만건+ 클레임 발생. 원인별 발생 비중·패턴이 체계적으로 분석되지 않은 상태</div>
+      <ul class="project-actions">
+        <li>10만건 배송 데이터 + 5만건 오배송 사진 분석으로 주소 유사성·동일 건물 내 호수 오인 등 근본원인 유형별 발생 비중 규명</li>
+        <li>물류팀 협업으로 배송 기사용 앱 내 'TIP' 기능 설계 — 과거 오배송 이력 기반 유사 주소·특이사항 알림 자동 표시, 기사가 현장 특이사항을 직접 기입·축적하는 현장 참여형 구조. PRD 작성 및 개발 협업</li>
+        <li>반복 오배송 다발 지역 집중 관리 리스트 운영, CS팀 협업 선제적 고객 안내 프로세스 실행</li>
+      </ul>
+      <div class="project-result">→ 오배송 관련 클레임 <strong>41%</strong> 감소, 오배송률 <strong>15%</strong> 감소(업계 최저 수준), 연간 <strong>18억원</strong> 절감, 물류혁신 우수 프로젝트 선정('23년 하반기)</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">2. 교환/반품 사유 카테고리 재설계 — 운영자/사용자 UX 개선 및 분류 체계 프로덕트 기획</div>
+      <div class="project-context"><strong>상황</strong> 부정확한 반품 사유 카테고리로 전체 반품 30% 오분류, 품질 이슈 원인 추적 및 파트너 피드백 불가, 연간 5억원 불필요 비용 발생</div>
+      <ul class="project-actions">
+        <li>SQL/Python 기반 10만건 반품 데이터 분석 및 텍스트 마이닝으로 고객 입력 사유와 실제 반품 원인 간 불일치 패턴을 유형화하여 오분류 핵심 원인 규명</li>
+        <li>UX리서치팀 협조로 1,500명 고객 사유 선택 행태 조사 결과 확보, 원인 추적 가능한 3-depth 카테고리 체계 재수립 후 A/B 테스트로 검증</li>
+        <li>반품 접수 시 이미지 업로드 기능 PRD 작성 및 개발 리딩, 사유-이미지 매칭 품질 이슈 DB 구축으로 파트너 품질 이슈 유형별 피드백 제공 기반 마련</li>
+      </ul>
+      <div class="project-result">→ 오분류율 30%→<strong>5%</strong>(연간 <strong>4억원+</strong> 절감), 재입고 소요시간 <strong>15%</strong> 단축, 파트너 피드백 체계 기반 확립</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">3. 배송 단계별 파손 근본원인 규명 및 포장·운영 프로세스 최적화</div>
+      <div class="project-context"><strong>상황</strong> 로켓배송 상품 파손율 1.0%, 주 평균 10억원 교환/반품 처리 비용. 파손 집중 구간 미특정</div>
+      <ul class="project-actions">
+        <li>상품군×배송단계별 파손 매트릭스 분석으로 단계·품목별 파손 집중 구간 특정, A/B 테스트(n=50,000)로 포장재 옵션별 파손율·비용·작업시간 최적 조합 검증</li>
+        <li>물류센터 운영팀과 공동 TF 구성, 취급주의 상품군 재분류 및 포장 SOP 표준화</li>
+      </ul>
+      <div class="project-result">→ 파손 관련 교환/반품 <strong>25%</strong> 감소, 포장 생산성(HTP) <strong>1.1배</strong> 향상</div>
+    </div>
+  </div>
+
+  <!-- KT -->
+  <div class="company-block">
+    <div class="company-header">㈜케이티 유통채널기획 / 클라우드서비스기획 과장 | 2015.01 ~ 2023.03</div>
+    <div class="company-role">담당: OpenAPI 기반 파트너 플랫폼 0→1 구축, 가맹점 정산 시스템 자동화, 1,500개 대리점 정책·KPI 거버넌스, CRM 시스템 기획</div>
+
+    <div class="project">
+      <div class="project-title">1. 클라우드 마켓플레이스 0→1 구축 — OpenAPI 기반 파트너 온보딩·정산 셀프서비스 플랫폼</div>
+      <div class="project-context"><strong>상황</strong> 30개 이상 제휴사 상품의 수기 온보딩으로 등록·수정에 약 2개월 소요, 정산 역시 수작업 기반으로 사업 확장 병목. B2B SaaS 마켓플레이스 도입 필요</div>
+      <ul class="project-actions">
+        <li>30개+ 제휴사 인터뷰 + 네이버클라우드 등 경쟁사 벤치마킹 → OpenAPI 기반 셀프서비스 플랫폼 방향성·요건 정의: 상품등록·수정·모니터링 자동화 및 정산 연동의 정책·프로세스 수립. 외부 제휴사 시스템과의 API 연동 규격 정의 및 PRD 작성</li>
+        <li>파트너 셀프서비스 어드민 기능 정의: 프로모션 등록·가격 변경·구독 플랜 관리·사용량 모니터링 등 파트너가 직접 운영할 수 있는 기능 설계, 온보딩 가이드·운영 정책 문서화</li>
+        <li>영업·개발·운영 3개 부서 15명 T/F 리딩(10개월), PRD 작성·개발 진행 직접 총괄, MVP→파일럿→전면 오픈 단계별 실행</li>
+      </ul>
+      <div class="project-result">→ 상품 온보딩 약 2개월 → 2주 이내(<strong>75% 단축</strong>), 거래액 <strong>2배</strong> 성장, 제휴 상품 최신화율 <strong>95%</strong>, 파트너 운영 부담 대폭 경감</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">2. 가맹점 정책 정산 시스템 자동화 — Business Rule 통합 및 빌링 시스템 모듈 신설</div>
+      <div class="project-context"><strong>상황</strong> 전국 1,500개 대리점 대상 월 100억 예산 정산을 수기 처리, 10% 정산 누락 발생. BM(사업부서)별 개통 실적·고객 유지율·부가서비스 가입 등 정산 기준이 제각각이어서 현장 혼란 및 정산 오류 반복</div>
+      <ul class="project-actions">
+        <li>현장 대리점 방문·점주 인터뷰로 핵심 페인포인트 도출. BM별 상이한 정산 기준을 통합하기 위해 영업·재무·운영 합동 TF 구성, 전사 공통 Business Rule 수립으로 부서간 기준 충돌 해소</li>
+        <li>IT개발팀 협업으로 전사 빌링 시스템 내 '가맹점 정책 관리 모듈' 신설 — PRD 작성·요건 정의·개발 진행 직접 리딩</li>
+        <li>Power BI 실시간 대시보드 구축으로 정산 현황·정책 집행률 모니터링 체계 확립, 대리점 정산 투명성 확보</li>
+      </ul>
+      <div class="project-result">→ 오정산 재무 손실 <strong>90% 감소</strong>, Man-Month <strong>70% 절감</strong>, 정책 집행 효과성 <strong>20%</strong> 향상</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">3. 800만 고객 세그먼테이션 기반 개인화 리텐션 마케팅 시스템</div>
+      <div class="project-context"><strong>상황</strong> 전 고객 동일 프로모션 적용, 반응률 2% 미만</div>
+      <ul class="project-actions">
+        <li>800만 고객 데이터 분석 → 5개 핵심 세그먼트 도출, 전국 1,500개 대리점 CRM 시스템 연동으로 세그먼트별 차별화 상담·추천 자동화</li>
+      </ul>
+      <div class="project-result">→ 캠페인 반응률 기존 대비 <strong>3배</strong> 향상, 재가입률 <strong>5%p</strong> 향상, KT CEO 표창('19.12)</div>
+    </div>
+  </div>
+
+  <!-- LGU+ -->
+  <div class="company-block">
+    <div class="company-header">㈜엘지유플러스 서부본부 영업추진팀 사원 | 2011.09 ~ 2014.04</div>
+    <div class="company-role">담당: 데이터 기반 지역 영업 전략 수립 및 대형 유통채널 제휴 운영</div>
+    <ul class="inline-actions">
+      <li>방문 고객 데이터 분석 기반 6개 상권 유형 분류, 상권별 맞춤 영업/프로모션 KPI 수립</li>
+      <li>하이마트 등 대형 유통점 제휴 운영 SOP 수립, 체험존 12→57개 확대 → 유무선 가입자 150% 성장, 시장 점유율 5%p 향상</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">보유 기술</div>
+  <table class="skill-table">
+    <tr><th>데이터 분석·검증</th><td>SQL, Python, 텍스트 마이닝, A/B 테스트 설계, Tableau, Power BI, QuickSight, Google Analytics</td></tr>
+    <tr><th>프로덕트 기획·리딩</th><td>PRD 작성, 요건 정의, API 연동 규격 설계, MVP→파일럿→전면 오픈 단계별 실행, 개발 프로세스 리딩, Jira/Confluence 기반 프로젝트 관리</td></tr>
+    <tr><th>정책·정산 설계</th><td>파트너 품질 정책 수립, SLA·스코어링 모델 설계, 빌링·정산 시스템 기획, Business Rule 정의, KPI 거버넌스</td></tr>
+    <tr><th>자격증</th><td>정보처리기사 | ADsP | HackerRank SQL (Advanced) | Google Analytics Certification | Google Data Analytics Professional Certificate</td></tr>
+  </table>
+</div>
+
+<!-- AWARDS -->
+<div class="section">
+  <div class="section-title">수상 및 활동</div>
+  <ul class="award-list">
+    <li><span>쿠팡 물류혁신 우수 프로젝트 선정 (오배송 축소, 연 18억원 절감)</span><span class="date">2023년 하반기</span></li>
+    <li><span>KT 핵심인재 선발 및 Cloud 서비스 기획 전문가 과정 이수</span><span class="date">2021.12 ~ 2022.04</span></li>
+    <li><span>KT Customer 부문 신규 사업 발굴 공모전 대상</span><span class="date">2021.11</span></li>
+    <li><span>KT CEO 표창 (고객 세그먼테이션 CRM 마케팅 성과)</span><span class="date">2019.12</span></li>
+    <li><span>KT 최우수 신입사원 수상 (종합점수 1위)</span><span class="date">2015.04</span></li>
+  </ul>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">학력사항</div>
+  <div class="edu-row">
+    <span>한국기술교육대학교 컴퓨터공학과 (학점 3.5/4.5)</span>
+    <span>2004.03 ~ 2011.02</span>
+  </div>
+</div>
+
+<!-- MILITARY -->
+<div class="section">
+  <div class="section-title">병역사항</div>
+  <div class="edu-row">
+    <span>육군 병장 만기제대</span>
+    <span>2005.01 ~ 2007.01</span>
+  </div>
+</div>
+
+</body>
+</html>
